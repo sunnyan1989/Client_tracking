@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>VTry.net Glasses Virtual Try-On Demo</title>
+    <link rel="stylesheet" type="text/css" href="demo.css">
+    <script src="jquery.min.js"></script>
+    <script src = "Javascript/jquery.js"></script>
+    <script src = "Javascript/URI.js"></script>
+
+ 
+    <script type="text/javascript">
+        var vtry = function(id){
+            var company = "";
+            var ServiceUrl = "";
+            var Server = ServiceUrl + "?co="+company+"&model="+id+"&trial=false";
+            $.ajax({
+                type:"POST",
+                data: {vendor: company, model: id, url: vtryServer},
+                url: "track.php",
+                success: function(data){
+                }
+              });          
+            window.open(Server);
+        };
+     </script>
+</head>
+<body>
+<div class="logoContainer">
+<span class="logo">Company Name</span>
+    <div class="menu">Men | Women</div>
+</div>
+<img class="header" src="demo-header.jpg" width="100%">
+<h1>Popular Eye Glasses</h1>
+<div id="container">
+
+ <div class="glasses"><img src="http://vtry.net/service/model/aimeikang/1/thumb.jpg"><span class="price">$339.95</span><button class="btnTryOn" onclick="vtry('1')">Try On</button></div><div class="glasses"><img src="http://vtry.net/service/model/aimeikang/2/thumb.jpg"><span class="price">$268.95</span><button class="btnTryOn" onclick="vtry('2')">Try On</button></div><div class="glasses"><img src="http://vtry.net/service/model/aimeikang/3/thumb.jpg"><span class="price">$333.95</span><button class="btnTryOn" onclick="vtry('3')">Try On</button></div><div class="glasses"><img src="http://vtry.net/service/model/aimeikang/4/thumb.jpg"><span class="price">$305.95</span><button class="btnTryOn" onclick="vtry('4')">Try On</button></div><div class="glasses"><img src="http://vtry.net/service/model/aimeikang/5/thumb.jpg"><span class="price">$100.95</span><button class="btnTryOn" onclick="vtry('5')">Try On</button></div><div class="glasses"><img src="http://vtry.net/service/model/aimeikang/6/thumb.jpg"><span class="price">$163.95</span><button class="btnTryOn" onclick="vtry('6')">Try On</button></div><div class="glasses"><img src="http://vtry.net/service/model/aimeikang/7/thumb.jpg"><span class="price">$183.95</span><button class="btnTryOn" onclick="vtry('7')">Try On</button></div><div class="glasses"><img src="http://vtry.net/service/model/aimeikang/8/thumb.jpg"><span class="price">$373.95</span><button class="btnTryOn" onclick="vtry('8')">Try On</button></div><div class="glasses"><img src="http://vtry.net/service/model/aimeikang/9/thumb.jpg"><span class="price">$129.95</span><button class="btnTryOn" onclick="vtry('9')">Try On</button></div><div class="glasses"><img src="http://vtry.net/service/model/aimeikang/10/thumb.jpg"><span class="price">$154.95</span><button class="btnTryOn" onclick="vtry('10')">Try On</button></div><div class="glasses"><img src="http://vtry.net/service/model/aimeikang/11/thumb.jpg"><span class="price">$315.95</span><button class="btnTryOn" onclick="vtry('11')">Try On</button></div><div class="glasses"><img src="http://vtry.net/service/model/aimeikang/12/thumb.jpg"><span class="price">$269.95</span><button class="btnTryOn" onclick="vtry('12')">Try On</button></div><div class="glasses"><img src="http://vtry.net/service/model/aimeikang/13/thumb.jpg"><span class="price">$201.95</span><button class="btnTryOn" onclick="vtry('13')">Try On</button></div><div class="glasses"><img src="http://vtry.net/service/model/aimeikang/14/thumb.jpg"><span class="price">$176.95</span><button class="btnTryOn" onclick="vtry('14')">Try On</button></div><div class="glasses"><img src="http://vtry.net/service/model/aimeikang/15/thumb.jpg"><span class="price">$196.95</span><button class="btnTryOn" onclick="vtry('15')">Try On</button></div><div class="glasses"><img src="http://vtry.net/service/model/aimeikang/16/thumb.jpg"><span class="price">$198.95</span><button class="btnTryOn" onclick="vtry('16')">Try On</button></div><div class="glasses"><img src="http://vtry.net/service/model/aimeikang/17/thumb.jpg"><span class="price">$199.95</span><button class="btnTryOn" onclick="vtry('17')">Try On</button></div></div>
+</body>
+</html>
